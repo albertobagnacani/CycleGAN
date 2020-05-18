@@ -72,3 +72,6 @@ fabric.properties
 
 .idea
 venv/
+
+res/dataset
+secret

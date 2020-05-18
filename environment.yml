@@ -1,0 +1,8 @@
+name: gan
+dependencies:
+  - tensorflow
+  - pandas
+  - matplotlib
+  - keras
+- pip:
+  - flickrapi

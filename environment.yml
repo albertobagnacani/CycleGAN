@@ -4,5 +4,7 @@ dependencies:
   - pandas
   - matplotlib
   - keras
+  - cv2
+  - numpy
 - pip:
   - flickrapi

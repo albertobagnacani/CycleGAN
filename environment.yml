@@ -1,10 +1,14 @@
 name: gan
 dependencies:
-  - tensorflow
+  - tensorflow-gpu
   - pandas
   - matplotlib
   - keras
-  - cv2
+  - opencv
   - numpy
-- pip:
-  - flickrapi
+  - Pillow
+# TODO
+# pip:
+#  - flickrapi
+#  - IPython
+#  - opencv-python

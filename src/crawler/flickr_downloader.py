@@ -43,20 +43,24 @@ def get_urls(image_tag, key, secret, max_count, output):
 
 def put_images(fn, output):
     urls = []
+    names = []
 
     with open(fn, newline="") as csvfile:
         doc = csv.reader(csvfile, delimiter=",")
 
         for row in doc:
-            if row[1].startswith("https"):
+            if row[1].startswith("http") or row[1].startswith("https"):
                 urls.append(row[1])
+                names.append(row[0])
 
     t0 = time.time()
     count = 0
-    for url in enumerate(urls):
+    for name, url in zip(names, enumerate(urls)):
         try:
             resp = requests.get(url[1], stream=True)
-            name = str(count) + ".jpg"
+            #n = str(count)
+            #zeros = 5 - len(n)
+            #name = "0"*zeros+n+".jpg"
             with open(output + name, "wb") as f:
                 f.write(resp.content)
 
@@ -72,6 +76,7 @@ def put_images(fn, output):
 
 def main():
     output_csv = "../../res/dataset/csv/urls.csv"
+    output_csv = "../../res/dataset/csv/alldata_urls.csv"
 
     with open("../secret", "r") as f:
         lines = f.readlines()
@@ -86,6 +91,8 @@ def main():
         output_data = "../../res/dataset/y/"
     else:
         output_data = "../../res/dataset/x/"
+
+    output_data = "../../res/dataset/z/"
 
     #if os.path.exists(output_csv):
     #    os.remove(output_csv)

@@ -1,7 +1,7 @@
 # if you want to insert your apikey in source code
-from crawler.flickr2.flickrDownloader import *
+from crawler.crawler_bis.flickrDownloader import *
 
-with open("../secret", "r") as f:
+with open("../../secret", "r") as f:
     lines = f.readlines()
 
 key = lines[0].rstrip()
@@ -12,7 +12,9 @@ task = 2
 n_images = 6000
 
 query = "portrait -blackandwhite -BW -monochrome -animal -cat -dog -bird -flower"
-query2 = r"portrait -blackandwhite -BW -monochrome -animal -cat -dog -bird -flower"
+query2 = r"selfie -blackandwhite -BW -monochrome -animal -cat -dog -bird -flower"
+
+camera = r'&camera=apple%2Fiphone_7'
 
 if __name__ == "__main__":
     if task == 1 or task == 3:
@@ -38,10 +40,10 @@ if __name__ == "__main__":
                                  image_size=FlickrImageSize.longedge_1600,
                                  content_type=FlickrContentType.photos,
                                  media=FlickrMedia.photos,
-                                 download_path="iphone_downloads",
+                                 download_path="../iphone_downloads",
                                  save_filename_prefix="iphone_downloaded_",
                                  forced_extension=None,
                                  verbose=True,
                                  ignore_errors=False,
                                  license_id=license_id,
-                                 camera=r'&camera=apple%2Fiphone_7')
+                                 camera=camera)

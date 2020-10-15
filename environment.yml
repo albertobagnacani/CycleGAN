@@ -12,3 +12,5 @@ dependencies:
 #  - flickrapi
 #  - IPython
 #  - opencv-python
+#  - tensorflow-addons
+#  - split-folders

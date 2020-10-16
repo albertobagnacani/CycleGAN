@@ -7,7 +7,7 @@ dependencies:
   - opencv
   - numpy
   - Pillow
-# TODO
+# TODO1 do it automatically
 # pip:
 #  - flickrapi
 #  - IPython

@@ -76,7 +76,7 @@ venv/
 res/dataset
 res/checkpoints
 res/logs
-
-others
+misc/
+others/
 
 secret

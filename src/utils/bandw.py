@@ -19,4 +19,4 @@ if __name__ == "__main__":
             img = Image.open(join(root_n, file)).convert('L')
             img.save(join(output_folder, dir_, 'jpg', file))
 
-    # TODO move train/val/test out of splitted, both in x and y
+    # TODO1 move train/val/test out of splitted, both in x and y

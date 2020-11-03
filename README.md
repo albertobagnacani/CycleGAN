@@ -1,4 +1,4 @@
-# GAN
+# CycleGAN
 You can read the project explaination here: 
 https://docs.google.com/document/d/1Eeq1lYp01QimSYfL7lo4ydQUKEBfPuumDcpRwTnM77E/edit?usp=sharing
 
